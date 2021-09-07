@@ -9,6 +9,6 @@ jobs:
         run: |
           apt-get install live-build
       - name: Build
-        run |
+        run: |
           sudo lb build
 
