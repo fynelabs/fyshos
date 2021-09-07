@@ -1,0 +1,14 @@
+name: Build ISO
+on: push
+
+jobs:
+  build-iso:
+    container: debian/bullseye
+    steps:
+      - name: Install live-build
+        run: |
+          apt-get install live-build
+      - name: Build
+        run |
+          sudo lb build
+
