@@ -16,6 +16,10 @@ jobs:
           git clone https://salsa.debian.org/live-team/live-build.git
           cd live-build
           make && sudo make install
+      - name: Config
+        run: |
+          sudo lb clean
+          lb config --debian-installer-gui=true --debian-installer=live -d stable --debian-installer-distribution stable
       - name: Build
         run: |
           sudo lb build
