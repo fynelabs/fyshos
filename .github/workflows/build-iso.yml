@@ -4,7 +4,7 @@ on: push
 jobs:
   build-iso:
     runs-on: ubuntu-latest
-    container: debian/bullseye
+    container: debian:bullseye
     steps:
       - name: Install live-build
         run: |
