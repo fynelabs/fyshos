@@ -7,8 +7,8 @@ jobs:
     steps:
       - name: Install live-build
         run: |
-          apt-get update
-          apt-get -y install debootstrap debhelper live-build sudo
+          sudo apt-get update
+          sudo apt-get -y install debootstrap debhelper live-build
       - name: Build
         run: |
           sudo lb build
