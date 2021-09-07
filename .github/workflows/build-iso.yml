@@ -4,12 +4,11 @@ on: push
 jobs:
   build-iso:
     runs-on: ubuntu-latest
-    container: debian:bullseye
     steps:
       - name: Install live-build
         run: |
           apt-get update
-          apt-get -y install live-build sudo
+          apt-get -y install debootstrap debhelper live-build sudo
       - name: Build
         run: |
           sudo lb build
