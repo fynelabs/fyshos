@@ -11,7 +11,7 @@ jobs:
         run: |
           git clone https://salsa.debian.org/live-team/live-build.git
           cd live-build
-          make install
+          make && sudo make install
       - name: Build
         run: |
           sudo lb build
