@@ -8,7 +8,8 @@ jobs:
     steps:
       - name: Install live-build
         run: |
-          apt-get install live-build
+          sudo apt update
+          sudo apt-get install live-build
       - name: Build
         run: |
           sudo lb build
