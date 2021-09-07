@@ -9,7 +9,7 @@ jobs:
       - name: Install live-build
         run: |
           apt-get update
-          apt-get install live-build
+          apt-get -y install live-build
       - name: Build
         run: |
           lb build
