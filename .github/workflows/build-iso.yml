@@ -27,9 +27,9 @@ jobs:
 
       - name: Get current date
         id: date
-        run: echo "::set-output name=date::$(date +'%Y/%m/%d_%H:%H')"
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d_%H:%H')"
       - name: Rename release files
-        run: mv live-image-amd64.hybrid.iso FyneOS-${{ steps.date.outputs.date }}.hybrid.iso
+        run: mv live-image-amd64.hybrid.iso FyneOS-amd64-${{ steps.date.outputs.date }}.hybrid.iso
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
