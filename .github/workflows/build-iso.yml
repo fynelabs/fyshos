@@ -26,7 +26,7 @@ jobs:
           sudo lb build
       - name: Upload
         uses: softprops/action-gh-release@v1
-        tag_name: testing
         with:
+          tag_name: testing
           files: |
             live-image-amd64.hybrid.iso
