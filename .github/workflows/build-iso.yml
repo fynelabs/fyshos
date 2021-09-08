@@ -24,9 +24,15 @@ jobs:
       - name: Build
         run: |
           sudo lb build
+
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+      - name: Rename release files
+        run: mv live-image-amd64.hybrid.iso FyneOS-${{ steps.date.outputs.date }}.hybrid.iso
       - name: Upload
         uses: softprops/action-gh-release@v1
         with:
           tag_name: testing
           files: |
-            live-image-amd64.hybrid.iso
+            FyneOS-${{ steps.date.outputs.date }}.hybrid.iso
