@@ -24,4 +24,9 @@ jobs:
       - name: Build
         run: |
           sudo lb build
-
+      - name: Upload
+        uses: softprops/action-gh-release@v1
+        tag_name: testing
+        with:
+          files: |
+            live-image-amd64.hybrid.iso
