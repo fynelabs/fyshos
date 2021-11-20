@@ -1,5 +1,7 @@
 # FyshOS
 
+> This repository has been moved to https://github.com/FyshOS/fyshos
+
 ## Building
 
 On a debian system (bullseye or later):
